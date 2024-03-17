@@ -1,3 +1,16 @@
 #root {
     background-color: #f3f5fc;
 }
+
+@media only screen and (min-width: 1025px) {
+    #root {
+        width: 1440px;
+        height: 1024px;
+        margin: 0 auto;
+    }
+
+    #logotipo-alura {
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+}
