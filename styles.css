@@ -1,5 +1,10 @@
+:root {
+    --custom-light-blue: #f3f5fc;
+    --custom-dark-blue: #0a3871;
+}
+
 #root {
-    background-color: #f3f5fc;
+    background-color: var(--custom-light-blue);
 }
 
 @media only screen and (min-width: 1025px) {
@@ -9,8 +14,36 @@
         margin: 0 auto;
     }
 
+    header {
+        display: inline-block;
+        width: 160px;
+        height: 88px;
+    }
+
     #logotipo-alura {
         margin-top: 40px;
         margin-left: 40px;
+    }
+
+    main {
+        display: inline-block;
+        height: 100%;
+        width: calc(100% - 160px);
+        margin-top: -88px;
+        margin-left: 160px;
+    }
+
+    #input-mensaje {
+        width: 577px;
+        height: 48px;
+        margin-top: 168px;
+        margin-left: 240px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 48px;
+        background-color: var(--custom-light-blue);
+        border: none;
+        color: var(--custom-dark-blue);
     }
 }
