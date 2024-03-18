@@ -6,18 +6,49 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Encriptador de texto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e853ed6b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="root">
+    <div id="root" role="none">
         <header>
-            <img src="./imagenes/Logo.svg" id="logotipo-alura" alt="Logotipo de Alura"/>
+            <h1>
+                <img src="./imagenes/Logo.svg" id="logotipo-alura" alt="Logotipo de Alura"/>
+            </h1>
         </header>
 
         <main>
-            <form id="principal">
-                <input type="text" id="input-mensaje" placeholder="Ingrese el texto aquí"  >
-                <!--Se opaca el texto pq es placeholder, buscar como arreglarlo-->
-            </form>
+            <section id="encriptador-principal">
+                <form id="contenedor-encriptador">
+                    <div id="input-y-botones" role="none">
+                        <input type="text" id="input-mensaje" placeholder="Ingrese el texto aquí"  >
+
+                        <div id="botones">
+                            <i class="fa-solid fa-circle-exclamation" id="signo-exclamacion"></i>
+                            <p id="aviso">Solo letras minúsculas y sin acentos</p>
+
+                            <br />
+
+                            <button type="submit" for="input-mensaje" id="boton-01">Encriptar</button>
+                            <button id="boton-02">Desencriptar</button>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <output for="input-mensaje" id="output-mensaje">
+                        <img src="./imagenes/Muneco.svg" id="muñeco-alura" alt="Ilustración de un personaje usando una lupa para inspeccionar un diamante"/>
+    
+                        <div id="contenedor-texto-output" role="none">
+                            <h2 id="no-mensaje-header">Ningún mensaje fue encontrado</h2>
+                            <p id="no-mensaje-parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        </div>
+                    </output>
+                </form>
+            </section>
+            
         </main>
         
 
