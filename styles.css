@@ -1,10 +1,15 @@
 :root {
     --custom-light-blue: #f3f5fc;
     --custom-dark-blue: #0a3871;
+    font-family: 'Inter', sans-serif;
 }
 
 #root {
     background-color: var(--custom-light-blue);
+}
+
+::-moz-placeholder {
+    opacity: 1;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -12,6 +17,7 @@
         width: 1440px;
         height: 1024px;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 
     header {
@@ -28,22 +34,113 @@
     main {
         display: inline-block;
         height: 100%;
-        width: calc(100% - 160px);
+        width: calc(100% - 240px);
         margin-top: -88px;
         margin-left: 160px;
+        padding-left: 80px;
+    }
+
+    #contenedor-encriptador {
+        height: fit-content;
+        display: flex;
+        margin-top: 0;
     }
 
     #input-mensaje {
         width: 577px;
         height: 48px;
-        margin-top: 168px;
-        margin-left: 240px;
+        margin: 168px 183px 0 0;
         font-family: Inter;
         font-weight: 400;
         font-size: 32px;
         line-height: 48px;
         background-color: var(--custom-light-blue);
         border: none;
+        color: var(--custom-dark-blue);
+    }
+
+    #output-mensaje {
+        display: inline-block;
+        height: 944px;
+        width: 400px;
+        background-color: #fff;
+        margin-top: 40px;
+        margin-right: 40px;
+        border-radius: 32px;
+    }
+
+    #muñeco-alura {
+        display: block;
+        height: 304px;
+        width: 336px;
+        margin: 203px auto 0;
+    }
+
+    #contenedor-texto-output {
+        height: 122px;
+        width: 336px;
+        margin: 32px auto 0;
+    }
+
+    #no-mensaje-header {
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    #no-mensaje-parrafo {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #input-y-botones {
+        position: relative;
+    }
+
+    #botones {
+        width: 685px;
+        position: absolute;
+        bottom: 32px;
+    }
+
+    #signo-exclamacion {
+        color: var(--custom-dark-blue);
+        display: inline-block;
+    }
+
+    #aviso {
+        display: inline-block;
+        color: #495057;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 16px;
+    }
+
+    #boton-01, #boton-02 {
+        display: inline-block;
+        height: 67px;
+        width: 328px;
+        text-align: center;
+        border-radius: 24px;
+        padding: 24px;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    #boton-01 {
+        margin-right: 20px;
+        border: none;
+        background-color: var(--custom-dark-blue);
+        color: #fff;
+    }
+
+
+    #boton-02 {
+        background-color: #d8dfe8;
+        border: 1px solid var(--custom-dark-blue);
         color: var(--custom-dark-blue);
     }
 }
