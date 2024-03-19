@@ -20,10 +20,10 @@
         </header>
 
         <main>
-            <section id="encriptador-principal">
-                <form id="contenedor-encriptador">
+            <section id="encriptador">
+                <form id="forma-encriptador">
                     <div id="input-y-botones" role="none">
-                        <input type="text" id="input-mensaje" placeholder="Ingrese el texto aquí"  >
+                        <input type="text" id="input-mensaje" placeholder="Ingrese el texto aquí"  />
 
                         <div id="botones">
                             <i class="fa-solid fa-circle-exclamation" id="signo-exclamacion"></i>
@@ -31,8 +31,8 @@
 
                             <br />
 
-                            <button type="submit" for="input-mensaje" id="boton-01">Encriptar</button>
-                            <button id="boton-02">Desencriptar</button>
+                            <button type="button" id="encriptar">Encriptar</button>
+                            <button type="button" id="desencriptar">Desencriptar</button>
                         </div>
                         
                     </div>
@@ -41,9 +41,9 @@
                     <output for="input-mensaje" id="output-mensaje">
                         <img src="./imagenes/Muneco.svg" id="muñeco-alura" alt="Ilustración de un personaje usando una lupa para inspeccionar un diamante"/>
     
-                        <div id="contenedor-texto-output" role="none">
-                            <h2 id="no-mensaje-header">Ningún mensaje fue encontrado</h2>
-                            <p id="no-mensaje-parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        <div id="output-default" role="none">
+                            <h2 id="output-default-header">Ningún mensaje fue encontrado</h2>
+                            <p id="output-default-parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
                         </div>
                     </output>
                 </form>
