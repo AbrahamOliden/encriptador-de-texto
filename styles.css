@@ -6,6 +6,14 @@
 
 #root {
     background-color: var(--custom-light-blue);
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+#encriptador {
+    height: 100%;
+    width: 100%;
 }
 
 #forma-encriptador { /*Cambiar flex-direction a column en tablet y celulares*/
@@ -36,6 +44,7 @@
     font-size: 12px;
     line-height: 18px;
     opacity: 0.8;
+    margin-bottom: 16px;
 }
 
 #encriptar, #desencriptar {
@@ -63,14 +72,85 @@
 }
 
 #output-mensaje {
-    display: inline-block;
     background-color: #fff;
-    margin: 40px;
     border-radius: 32px;
+}
+
+#output-default-header {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#output-default-parrafo {
+    font-size: 16px;
+    text-align: center;
 }
 
 ::-moz-placeholder {
     opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    #root {
+        width: 768px;
+        height: 1174px;
+    }
+
+    main {
+        height: calc(100% - 124px);
+    }
+
+    #logotipo-alura {
+        margin-top: 34px;
+    }
+
+    #forma-encriptador {
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+    }
+
+    #input-y-botones {
+        position: relative;
+        height: calc(100% - 197px);
+    }
+
+    #botones {
+        position: absolute;
+        bottom: 0;
+    }
+
+    #input-mensaje {
+        margin-top: 116px;
+    }
+
+    #output-mensaje {
+        position: absolute;
+        bottom: 0;
+        width: 688px;
+        min-height: 133px;
+        height: fit-content;
+    }
+
+    #muñeco-alura {
+        display: none;
+    }
+
+    #output-default {
+        height: 69px;
+        width: 624px;
+        margin: 32px;
+    }
+
+    #output-default-header {
+        height: 29px;
+    }
+
+    #output-default-parrafo {
+        height: 24px;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -99,6 +179,10 @@
         padding-left: 80px;
     }
 
+    #forma-encriptador {
+        flex-direction: row;
+    }
+
     #input-mensaje {
         width: 577px;
         margin: 168px 183px 0 0;
@@ -112,10 +196,6 @@
         width: 685px;
         position: absolute;
         bottom: 32px;
-    }
-
-    #aviso {
-        margin-bottom: 16px;
     }
 
     #encriptar, #desencriptar {
@@ -140,8 +220,8 @@
         display: inline-block;
         height: 944px;
         width: 400px;
-        margin-bottom: 0 !important;
-        margin-left: 0 !important;
+        margin-bottom: 0;
+        margin-left: 0;
     }
 
     #muñeco-alura {
@@ -157,8 +237,8 @@
         margin: 32px auto 0;
     }
 
-    #output-default-header {
-        font-weight: bold;
+    /*#output-default-header {
+        font-weight: 700;
         font-size: 24px;
         text-align: center;
         margin-bottom: 16px;
@@ -167,5 +247,5 @@
     #output-default-parrafo {
         font-size: 16px;
         text-align: center;
-    }
+    }*/
 }
