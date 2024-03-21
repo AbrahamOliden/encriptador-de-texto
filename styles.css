@@ -8,7 +8,16 @@
     background-color: var(--custom-light-blue);
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 40px;
+    padding: 38px;
+}
+
+#titulo {
+    width: 100%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--custom-dark-blue);
 }
 
 #encriptador {
@@ -74,6 +83,7 @@
 #output-mensaje {
     background-color: #fff;
     border-radius: 32px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
 #output-default-header {
@@ -117,13 +127,19 @@
         height: calc(100% - 197px);
     }
 
+    #input-mensaje {
+        width: 688px;
+        margin-top: 116px;
+    }
+
     #botones {
         position: absolute;
         bottom: 0;
+        width: 688px;
     }
 
-    #input-mensaje {
-        margin-top: 116px;
+    #encriptar, #desencriptar {
+        width: 330px;
     }
 
     #output-mensaje {
@@ -161,21 +177,26 @@
     }
 
     header {
-        display: inline-block;
-        width: 160px;
-        height: 88px;
+        display: flex;
+        width: calc(100% - 400px);
+        height: 48px;
     }
 
     #logotipo-alura {
-        margin-top: 40px;
-        margin-left: 40px;
+        margin-top: 0;
     }
 
+    /*#titulo {
+        width: 100%;
+        text-align: center;
+        font: inherit;
+    }*/
+
     main {
-        height: 100%;
-        width: calc(100% - 240px);
-        margin-top: -88px;
-        margin-left: 160px;
+        height: calc(100% - 50px);
+        width: calc(100% - 200px);
+        margin-top: 0;
+        margin-left: 120px;
         padding-left: 80px;
     }
 
@@ -183,19 +204,20 @@
         flex-direction: row;
     }
 
+    #input-y-botones {
+        height: calc(100%);
+        width: calc(100% - 400px);
+    }
+
     #input-mensaje {
         width: 577px;
         margin: 168px 183px 0 0;
     }
 
-    #input-y-botones {
-        position: relative;
-    }
-
     #botones {
-        width: 685px;
+        width: 100%;
         position: absolute;
-        bottom: 32px;
+        bottom: 0;
     }
 
     #encriptar, #desencriptar {
@@ -203,7 +225,7 @@
     }
 
     #encriptar {
-        margin-right: 20px;
+        margin-right: 32px;
         border: none;
         background-color: var(--custom-dark-blue);
         color: #fff;
@@ -220,8 +242,9 @@
         display: inline-block;
         height: 944px;
         width: 400px;
-        margin-bottom: 0;
-        margin-left: 0;
+        top: -48px;
+        bottom: 0;
+        right: 0;
     }
 
     #muñeco-alura {
@@ -237,15 +260,4 @@
         margin: 32px auto 0;
     }
 
-    /*#output-default-header {
-        font-weight: 700;
-        font-size: 24px;
-        text-align: center;
-        margin-bottom: 16px;
-    }
-
-    #output-default-parrafo {
-        font-size: 16px;
-        text-align: center;
-    }*/
 }
