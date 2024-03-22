@@ -4,11 +4,16 @@
     font-family: 'Inter', sans-serif;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 #root {
     background-color: var(--custom-light-blue);
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 38px;
+    padding: 24px;
 }
 
 #titulo {
@@ -20,19 +25,21 @@
     color: var(--custom-dark-blue);
 }
 
-#encriptador {
-    height: 100%;
-    width: 100%;
-}
-
 #forma-encriptador { /*Cambiar flex-direction a column en tablet y celulares*/
     display: flex;
     margin-top: 0;
 }
 
+#label-mensaje {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--custom-dark-blue);
+}
+
 #input-mensaje {
     height: 48px;
-    margin: 168px 183px 0 0;
     font-family: Inter;
     font-weight: 400;
     font-size: 32px;
@@ -98,10 +105,81 @@
     text-align: center;
 }
 
-::-moz-placeholder {
-    opacity: 1;
-}
+/*::-moz-placeholder {
+    opacity: 0.8;
+}*/
 
+@media only screen and (min-width: 320px) {
+    #root {
+        min-height: 933px;
+        width: 375px;
+        padding: 16px;
+    }
+
+    main {
+        height: 901px;
+    }
+
+    header {
+        height: 163px;
+    }
+
+    #logotipo-alura {
+        margin-top: 8px;
+    }
+
+    #titulo {
+        margin-top: 24px;
+    }
+
+    #encriptador {
+        height: calc(100% - 187px); /*163px from header plus 24px from self margin-top*/
+        margin-top: 24px;
+    }
+
+    #forma-encriptador {
+        height: calc(100% - 1px);
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    #input-texto {
+        height: 100%;
+    }
+
+    #input-mensaje {
+        width: 343px;
+        min-height: 48px;
+        border: 1px solid var(--custom-dark-blue);
+        border-radius: 16px;
+    }
+
+    #botones {
+        margin-bottom: 64px;
+    }
+    /*Espacio para estilos previos a:*/
+
+    #encriptar {
+        margin-bottom: 24px;
+    }
+
+    #encriptar, #desencriptar {
+        width: 343px;
+    }
+
+    #output-mensaje {
+        box-sizing: border-box;
+        width: 327px;
+        min-height: 186px;
+        margin: 0 auto 16px;
+        padding: 32px;
+    }
+
+    #muñeco-alura {
+        display: none;
+    }
+}
+/*
 @media only screen and (min-width: 768px) {
     #root {
         width: 768px;
@@ -122,7 +200,7 @@
         position: relative;
     }
 
-    #input-y-botones {
+    #input-texto {
         position: relative;
         height: calc(100% - 197px);
     }
@@ -186,12 +264,6 @@
         margin-top: 0;
     }
 
-    /*#titulo {
-        width: 100%;
-        text-align: center;
-        font: inherit;
-    }*/
-
     main {
         height: calc(100% - 50px);
         width: calc(100% - 200px);
@@ -204,7 +276,7 @@
         flex-direction: row;
     }
 
-    #input-y-botones {
+    #input-texto {
         height: calc(100%);
         width: calc(100% - 400px);
     }
@@ -259,5 +331,5 @@
         width: 336px;
         margin: 32px auto 0;
     }
-
 }
+*/
