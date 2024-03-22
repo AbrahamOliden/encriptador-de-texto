@@ -11,34 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4e853ed6b3.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="container">
     <div id="root" role="none">
-        <header>
 
-            <img src="./imagenes/Logo.svg" id="logotipo-alura" alt="Logotipo de Alura"/>
-            <h1 id="titulo">Encriptador de texto</h1>
-        </header>
+        <main role="main">
+            <header>
+                <img src="./imagenes/logo-alura.svg" id="logotipo-alura" alt="Logotipo de Alura"/>
+                <h1 id="titulo">Encriptador de texto</h1>
+            </header>
 
-        <main>
             <section id="encriptador">
                 <form id="forma-encriptador">
-                    <div id="input-y-botones" role="none">
-                        <label for="input-mensaje">Ingrese el texto:
-                            <input type="text" id="input-mensaje" placeholder="Ingrese el texto aquí"  />
-                        </label>
-
-                        <div id="botones">
-                            <i class="fa-solid fa-circle-exclamation" id="signo-exclamacion"></i>
-                            <p id="aviso">Solo letras minúsculas y sin acentos</p>
-
-                            <br />
-
-                            <button type="button" id="encriptar">Encriptar</button>
-                            <button type="button" id="desencriptar">Desencriptar</button>
-                        </div>
-                        
+                    <div id="input-texto" role="none">
+                        <label for="input-mensaje" id="label-mensaje">Ingrese el texto:</label>
+                        <input type="text" id="input-mensaje" placeholder="Ingrese el texto aquí"  />
                     </div>
                     
+                    <div id="botones">
+                        <i class="fa-solid fa-circle-exclamation" id="signo-exclamacion"></i>
+                        <p id="aviso">Solo letras minúsculas y sin acentos</p>
+
+                        <br />
+
+                        <button type="button" id="encriptar">Encriptar</button>
+                        <button type="button" id="desencriptar">Desencriptar</button>
+                    </div>
                     
                     <output for="input-mensaje" id="output-mensaje">
                         <img src="./imagenes/Muneco.svg" id="muñeco-alura" alt="Ilustración de un personaje usando una lupa para inspeccionar un diamante"/>
