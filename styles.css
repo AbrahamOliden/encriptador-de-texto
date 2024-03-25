@@ -128,7 +128,7 @@
     }
 
     #titulo {
-        margin-top: 24px;
+        margin: 24px auto 0;
         width: 305px;
     }
 
@@ -138,9 +138,8 @@
     }
 
     #forma-encriptador {
-        height: calc(100% - 1px);
+        height: 100%;
         flex-direction: column;
-        justify-content: flex-end;
     }
 
     #input-texto {
@@ -238,5 +237,74 @@
         width: 688px;
         min-height: 133px;
         margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    #root {
+        min-height: 1024px;
+        width: 1440px;
+        padding: 40px;
+    }
+
+    main {
+        height: 1024px;
+    }
+
+    header {
+        height: 168px;
+        position: absolute; /* NO FUNCIONA */
+        width: calc(100% - 480px); /*400px from output container plus 80px from #root's padding*/
+        z-index: 2;
+    }
+
+    #logotipo-alura {
+        margin: 0 44px;
+    }
+
+    #titulo {
+        text-align: right;
+    }
+
+    #encriptador {
+        height: 100%; 
+        margin:  0;
+    }
+
+    #forma-encriptador {
+        height: 100%;
+    }
+
+    #input-texto {
+        width: calc(100% - 480px);
+        padding-top: 168px;
+    }
+
+    #label-mensaje {
+        margin-left: 200px;
+    }
+
+    #input-mensaje {
+        display: block;
+        width: 577px;
+        margin: 16px auto 0 200px;
+    }
+
+    #botones {
+        width: 685px;
+        margin: 0 0 32px 195px;
+    }
+
+    #encriptar {
+        margin-right: 24px;
+    }
+
+    #encriptar, #desencriptar {
+        width: 328px;
+        display: inline-block;
+    }
+
+    #output-mensaje {
+        /**/
     }
 }
