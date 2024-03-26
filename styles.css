@@ -7,6 +7,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    background-color: var(--custom-light-blue);
 }
 
 #root {
@@ -240,7 +241,7 @@
     }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1440px) {
     #root {
         min-height: 1024px;
         width: 1440px;
@@ -248,13 +249,13 @@
     }
 
     main {
-        height: 1024px;
+        height: 964px; /*1024px - 80px pading*/
         position: relative;
     }
 
     header {
         height: 168px;
-        position: absolute; /* NO FUNCIONA */
+        position: absolute;
         width: calc(100% - 480px); /*400px from output container plus 80px from #root's padding*/
         z-index: 2;
     }
@@ -308,6 +309,12 @@
     #output-mensaje {
         position: absolute;
         right: 0;
-        /**/
+        height: 944px;
+        width: 400px;
+    }
+
+    #muñeco-alura {
+        display: block;
+        margin: 210px 0 32px;
     }
 }
