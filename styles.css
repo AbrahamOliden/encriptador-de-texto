@@ -249,6 +249,7 @@
 
     main {
         height: 1024px;
+        position: relative;
     }
 
     header {
@@ -305,6 +306,8 @@
     }
 
     #output-mensaje {
+        position: absolute;
+        right: 0;
         /**/
     }
 }
