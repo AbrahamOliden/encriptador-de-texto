@@ -27,7 +27,12 @@
 
 #forma-encriptador { /*Cambiar flex-direction a column en tablet y celulares*/
     display: flex;
+    height: 100%;
     margin-top: 0;
+}
+
+#input-seccion {
+    height: 100%;
 }
 
 #label-mensaje {
@@ -39,13 +44,16 @@
 }
 
 #input-mensaje {
-    height: 48px;
+    box-sizing: border-box;
+    min-height: 48px;
     font-family: Inter;
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
+    padding: 0 16px;
     background-color: var(--custom-light-blue);
-    border: none;
+    border: 1px solid var(--custom-dark-blue);
+    border-radius: 16px;
     color: var(--custom-dark-blue);
 }
 
@@ -90,7 +98,10 @@
 #output-mensaje {
     background-color: #fff;
     border-radius: 32px;
+    box-sizing: border-box;
     box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 16px;
+    padding: 32px;
 }
 
 #output-default-header {
@@ -129,7 +140,7 @@
     }
 
     #titulo {
-        margin: 24px auto 0;
+        margin: 24px 0 auto;
         width: 305px;
     }
 
@@ -139,19 +150,11 @@
     }
 
     #forma-encriptador {
-        height: 100%;
         flex-direction: column;
-    }
-
-    #input-texto {
-        height: 100%;
     }
 
     #input-mensaje {
         width: 343px; 
-        min-height: 48px;
-        border: 1px solid var(--custom-dark-blue);
-        border-radius: 16px;
     }
 
     #botones {
@@ -168,11 +171,8 @@
     }
 
     #output-mensaje {
-        box-sizing: border-box;
         width: 327px;
         min-height: 186px;
-        margin: 0 auto 16px;
-        padding: 32px;
     }
 
     #muñeco-alura {
@@ -198,14 +198,12 @@
     }
 
     #logotipo-alura {
-        margin-top: 33px;
-        height: 48px;
-        width: 32px;
+        margin-top: 24px;
     }
 
     #titulo {
         width: 650px;
-        margin-top: 0;
+        margin: 0 auto;
     }
 
     #encriptador {
@@ -254,7 +252,6 @@
     }
 
     header {
-        height: 168px;
         position: absolute;
         width: calc(100% - 480px); /*400px from output container plus 80px from #root's padding*/
         z-index: 2;
@@ -273,11 +270,7 @@
         margin:  0;
     }
 
-    #forma-encriptador {
-        height: 100%;
-    }
-
-    #input-texto {
+    #input-seccion {
         width: calc(100% - 480px);
         padding-top: 168px;
     }
