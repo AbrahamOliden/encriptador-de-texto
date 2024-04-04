@@ -15,17 +15,33 @@ function verifyInput(action) {
     message = document.getElementById('input-mensaje').value;
 
     //function's body
-    if (lowerCaseRegex.test(message)) { // After checking the validity of the message, it will return the result of another function depending on what action the user chose 
-        if (action === 'encrypt') {
-            return encrypt(message);
-        } else if (action === 'decrypt') {
-            return decrypt(message);
-        };
+    if (lowerCaseRegex.test(message)) { // After checking the validity of the message, it will return the result of another function depending on what action the user chose
+
+        const processedMessage = action === 'encrypt'
+            ? encrypt(message)
+            : decrypt(message);
+        modifyDisplay(processedMessage);
+        
     };
 
-    console.log('no pasa regex');
     return false; /*Aqui cambiar a uno alerta o alga asi yo k c */
 };
+
+function modifyDisplay(message) {
+    //variables
+    const ilustration = document.getElementById('muñeco-alura');
+    const defaultOutput = document.getElementById('output-default');
+    const processedOutput = document.getElementById('output-procesado');
+    const copyOutputButton = document.getElementById('copiar-output');
+
+    //function's body
+    ilustration.style.display = 'none';
+    defaultOutput.style.display = 'none';
+    processedOutput.style.display = 'block';
+    processedOutput.value = message;
+    copyOutputButton.style.display = 'block';
+
+}
 
 //function used to encrypt the user's message
 function encrypt(message) {
@@ -69,5 +85,6 @@ function decrypt(message) {
 
     //function's body
     const decryptedMessage = messageToDecrypt.replace(encryptedStringRegex, (match) => stringsToDecrypt[match]); //a variable in which we store the value returned of the replace method run into the encrytped message
+    console.log(decryptedMessage);
     return decryptedMessage;
 };
