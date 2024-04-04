@@ -96,6 +96,8 @@
 }
 
 #output-mensaje {
+    position: relative;
+    flex-grow: 1;
     background-color: #fff;
     border-radius: 32px;
     box-sizing: border-box;
@@ -114,6 +116,26 @@
 #output-default-parrafo {
     font-size: 16px;
     text-align: center;
+}
+
+#output-procesado {
+    display: none;
+    height: fit-content; /*Este no se si jale*/
+    flex-grow: 1;
+}
+
+#copiar-output {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    height: 67px;
+    bottom: 32px;
+    margin-top: 32px;
+    padding: 24px;
+    color: var(--custom-dark-blue);
+    background-color: var(--custom-light-blue);
+    border: 1px solid var(--custom-dark-blue);
+    border-radius: 24px;
 }
 
 /*::-moz-placeholder {
@@ -171,12 +193,20 @@
     }
 
     #output-mensaje {
-        width: 327px;
+        width: 343px;
         min-height: 186px;
     }
 
     #muñeco-alura {
         display: none;
+    }
+
+    #output-procesado {
+        max-width: calc(100%); /*from padding*/
+    }
+
+    #copiar-output {
+        width: 279px;
     }
 }
 
@@ -236,6 +266,10 @@
         width: 688px;
         min-height: 133px;
         margin-bottom: 0;
+    }
+
+    #copiar-output {
+        width: 624px;
     }
 }
 
@@ -309,5 +343,13 @@
     #muñeco-alura {
         display: block;
         margin: 210px 0 32px;
+    }
+
+    #output-procesado {
+        height: calc(100% - 99px); /*67px from button's height plus 32px from its top margin*/
+    }
+
+    #copiar-output {
+        width: 336px;
     }
 }
