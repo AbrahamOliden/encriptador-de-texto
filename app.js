@@ -2,10 +2,14 @@
 let message = "";
 const encryptButton = document.getElementById('encriptar');
 const decryptButton = document.getElementById('desencriptar');
+const inputSection = document.getElementById('input-mensaje');
 
 //Event listeners
 encryptButton.addEventListener('click', verifyInput.bind(null, 'encrypt'));
 decryptButton.addEventListener('click', verifyInput.bind(null, 'decrypt'));
+
+/*inputSection.addEventListener('keyup', adjustHeight);
+inputSection.addEventListener('paste', adjustHeight);*/
 
 //Functions
 //this is the function called when the encrypt or decrypt buttons are clicked
@@ -88,3 +92,13 @@ function decrypt(message) {
     console.log(decryptedMessage);
     return decryptedMessage;
 };
+
+function copyText() {
+
+}
+
+function adjustHeight() {
+    const inputSection = document.getElementById('input-mensaje');
+    //inputSection.style.height = 'auto';
+    inputSection.style.height = inputSection.scrollHeight + 'px';
+}
