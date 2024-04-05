@@ -25,9 +25,9 @@
     color: var(--custom-dark-blue);
 }
 
-#forma-encriptador { /*Cambiar flex-direction a column en tablet y celulares*/
+#forma-encriptador {
     display: flex;
-    height: 100%;
+    /*height: 100%;*/
     margin-top: 0;
 }
 
@@ -45,7 +45,7 @@
 
 #input-mensaje {
     box-sizing: border-box;
-    min-height: 48px;
+    height: 48px;
     font-family: Inter;
     font-weight: 400;
     font-size: 32px;
@@ -55,6 +55,7 @@
     border: 1px solid var(--custom-dark-blue);
     border-radius: 16px;
     color: var(--custom-dark-blue);
+    overflow: hidden;
 }
 
 #signo-exclamacion {
@@ -96,7 +97,7 @@
 }
 
 #output-mensaje {
-    position: relative;
+    position: static;
     flex-grow: 1;
     background-color: #fff;
     border-radius: 32px;
@@ -120,19 +121,21 @@
 
 #output-procesado {
     display: none;
-    height: fit-content; /*Este no se si jale*/
-    flex-grow: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #495057;
 }
 
 #copiar-output {
     display: none;
-    position: absolute;
     box-sizing: border-box;
     height: 67px;
-    bottom: 32px;
     margin-top: 32px;
     padding: 24px;
     color: var(--custom-dark-blue);
+    font-size: 16px;
     background-color: var(--custom-light-blue);
     border: 1px solid var(--custom-dark-blue);
     border-radius: 24px;
@@ -173,6 +176,10 @@
 
     #forma-encriptador {
         flex-direction: column;
+    }
+
+    #input-seccion {
+        min-height: 350px;
     }
 
     #input-mensaje {
@@ -241,13 +248,13 @@
         margin-top: 40px;
     }
 
-    /*Espacio pa estilos anteriores*/
+    #input-seccion {
+        min-height: 550px;
+    }
 
     #input-mensaje {
         width: 688px;
     }
-    
-    /*Espacio pa estilos anteriores*/
 
     #botones {
         width: 688px;
@@ -305,7 +312,9 @@
     }
 
     #input-seccion {
+        box-sizing: content-box;
         width: calc(100% - 480px);
+        height: 630px;
         padding-top: 168px;
     }
 
@@ -351,5 +360,6 @@
 
     #copiar-output {
         width: 336px;
+        margin-top: 32px;
     }
 }
