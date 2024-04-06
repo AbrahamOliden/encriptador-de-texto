@@ -1,5 +1,6 @@
 //Variables
 let message = "";
+let processedMessage = "";
 const encryptButton = document.getElementById('encriptar');
 const decryptButton = document.getElementById('desencriptar');
 const inputSection = document.getElementById('input-mensaje');
@@ -7,9 +8,6 @@ const inputSection = document.getElementById('input-mensaje');
 //Event listeners
 encryptButton.addEventListener('click', verifyInput.bind(null, 'encrypt'));
 decryptButton.addEventListener('click', verifyInput.bind(null, 'decrypt'));
-
-/*inputSection.addEventListener('keyup', adjustHeight);
-inputSection.addEventListener('paste', adjustHeight);*/
 
 //Functions
 //this is the function called when the encrypt or decrypt buttons are clicked
@@ -21,14 +19,14 @@ function verifyInput(action) {
     //function's body
     if (lowerCaseRegex.test(message)) { // After checking the validity of the message, it will return the result of another function depending on what action the user chose
 
-        const processedMessage = action === 'encrypt'
+        processedMessage = action === 'encrypt'
             ? encrypt(message)
             : decrypt(message);
         modifyDisplay(processedMessage);
         
+    } else {
+        alert('Introducir solamente letras minusculas, sin acentos ni caracteres especiales');
     };
-
-    return false; /*Aqui cambiar a uno alerta o alga asi yo k c */
 };
 
 function modifyDisplay(message) {
@@ -70,7 +68,6 @@ function encrypt(message) {
             };
     }, '');
 
-    console.log(encryptedMessage);
     return encryptedMessage;
 };
 
@@ -89,16 +86,17 @@ function decrypt(message) {
 
     //function's body
     const decryptedMessage = messageToDecrypt.replace(encryptedStringRegex, (match) => stringsToDecrypt[match]); //a variable in which we store the value returned of the replace method run into the encrytped message
-    console.log(decryptedMessage);
     return decryptedMessage;
 };
 
 function copyText() {
-
-}
+    navigator.clipboard.writeText(processedMessage)
+        .then(() => {
+            alert('Text copied to clipboard');
+        });
+};
 
 function adjustHeight() {
     const inputSection = document.getElementById('input-mensaje');
-    //inputSection.style.height = 'auto';
     inputSection.style.height = inputSection.scrollHeight + 'px';
 }
