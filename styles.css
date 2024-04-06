@@ -27,7 +27,6 @@
 
 #forma-encriptador {
     display: flex;
-    /*height: 100%;*/
     margin-top: 0;
 }
 
@@ -103,7 +102,7 @@
     border-radius: 32px;
     box-sizing: border-box;
     box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
-    margin: 0 auto 16px;
+    margin-bottom: 40px;
     padding: 32px;
 }
 
@@ -140,10 +139,6 @@
     border: 1px solid var(--custom-dark-blue);
     border-radius: 24px;
 }
-
-/*::-moz-placeholder {
-    opacity: 0.8;
-}*/
 
 @media only screen and (min-width: 320px) {
     #root {
@@ -189,7 +184,6 @@
     #botones {
         margin-bottom: 64px;
     }
-    /*Espacio para estilos previos a:*/
 
     #encriptar {
         margin-bottom: 24px;
@@ -272,7 +266,6 @@
     #output-mensaje {
         width: 688px;
         min-height: 133px;
-        margin-bottom: 0;
     }
 
     #copiar-output {
