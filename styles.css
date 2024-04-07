@@ -21,7 +21,7 @@
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: var(--custom-dark-blue);
 }
 
@@ -30,14 +30,10 @@
     margin-top: 0;
 }
 
-#input-seccion {
-    height: 100%;
-}
-
 #label-mensaje {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 48px;
     color: var(--custom-dark-blue);
 }
@@ -47,7 +43,7 @@
     height: 48px;
     font-family: Inter;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 48px;
     padding: 0 16px;
     background-color: var(--custom-light-blue);
@@ -65,7 +61,7 @@
 #aviso {
     display: inline-block;
     color: #495057;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 18px;
     opacity: 0.8;
     margin-bottom: 16px;
@@ -78,7 +74,7 @@
     border-radius: 24px;
     padding: 24px;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 19px;
 }
 
@@ -108,13 +104,13 @@
 
 #output-default-header {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     margin-bottom: 16px;
 }
 
 #output-default-parrafo {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -122,7 +118,7 @@
     display: none;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 36px;
     color: #495057;
 }
@@ -134,7 +130,7 @@
     margin-top: 32px;
     padding: 24px;
     color: var(--custom-dark-blue);
-    font-size: 16px;
+    font-size: 1rem;
     background-color: var(--custom-light-blue);
     border: 1px solid var(--custom-dark-blue);
     border-radius: 24px;
@@ -152,7 +148,7 @@
     }
 
     header {
-        height: 163px;
+        min-height: 163px;
     }
 
     #logotipo-alura {
@@ -165,7 +161,7 @@
     }
 
     #encriptador {
-        height: calc(100% - 187px); /*163px from header plus 24px from self margin-top*/
+        min-height: calc(100% - 24px); /*163px from header plus 24px from self margin-top*/
         margin-top: 24px;
     }
 
@@ -225,7 +221,6 @@
     header {
         display: flex;
         align-items: baseline;
-        height: 160px;
     }
 
     #logotipo-alura {
@@ -281,13 +276,13 @@
     }
 
     main {
-        height: 964px; /*1024px - 80px pading*/
+        min-height: 964px; /*1024px - 80px pading*/
         position: relative;
     }
 
     header {
         position: absolute;
-        width: calc(100% - 480px); /*400px from output container plus 80px from #root's padding*/
+        width: calc(100% - 400px); /*400px from output container*/
         z-index: 2;
     }
 
@@ -300,14 +295,18 @@
     }
 
     #encriptador {
-        height: 100%; 
+        min-height: 964px; 
         margin:  0;
+    }
+
+    #forma-encriptador {
+        min-height: 964px;
     }
 
     #input-seccion {
         box-sizing: content-box;
-        width: calc(100% - 480px);
-        height: 630px;
+        width: calc(100% - 400px);
+        min-height: 630px;
         padding-top: 168px;
     }
 
@@ -338,7 +337,7 @@
     #output-mensaje {
         position: absolute;
         right: 0;
-        height: 944px;
+        min-height: 944px;
         width: 400px;
     }
 
@@ -353,6 +352,8 @@
 
     #copiar-output {
         width: 336px;
+        position: absolute;
+        bottom: 32px;
         margin-top: 32px;
     }
 }
