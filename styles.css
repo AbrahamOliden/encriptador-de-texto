@@ -268,10 +268,10 @@
     }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1200px) {
     #root {
         min-height: 1024px;
-        width: 1440px;
+        width: 1200px;
         padding: 40px;
     }
 
@@ -283,7 +283,8 @@
     header {
         position: absolute;
         width: calc(100% - 400px); /*400px from output container*/
-        z-index: 2;
+        height: 100px;
+        z-index: 1;
     }
 
     #logotipo-alura {
@@ -291,7 +292,7 @@
     }
 
     #titulo {
-        text-align: right;
+        text-align: center;
     }
 
     #encriptador {
@@ -304,25 +305,25 @@
     }
 
     #input-seccion {
-        box-sizing: content-box;
+        box-sizing: border-box;
         width: calc(100% - 400px);
-        min-height: 630px;
-        padding-top: 168px;
+        min-height: 400px;
+        padding-top: 100px;
     }
 
     #label-mensaje {
-        margin-left: 200px;
+        margin-left: 0;
     }
 
     #input-mensaje {
         display: block;
         width: 577px;
-        margin: 16px auto 0 200px;
+        margin: 16px 0;
     }
 
     #botones {
         width: 685px;
-        margin: 0 0 32px 195px;
+        margin: 32px 0;
     }
 
     #encriptar {
@@ -337,13 +338,14 @@
     #output-mensaje {
         position: absolute;
         right: 0;
-        min-height: 944px;
-        width: 400px;
+        min-height: 550px;
+        width: 350px;
     }
 
     #muñeco-alura {
         display: block;
-        margin: 210px 0 32px;
+        margin: 32px 0;
+        width: 290px;
     }
 
     #output-procesado {
@@ -351,7 +353,7 @@
     }
 
     #copiar-output {
-        width: 336px;
+        width: 290px;
         position: absolute;
         bottom: 32px;
         margin-top: 32px;
